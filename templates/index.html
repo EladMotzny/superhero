@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'main.css')}}">
+    <title>Super Hero Wiki</title>
+  </head>
+  <body>
+    <div class="search-form">
+      <form action = "/search" method="POST">
+        <label class="search" for="search">Search Hero:</label>
+        <br/>
+        <input type="text" name="search" id="search" placeholder="Deadpool" />
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class = "hero">
+        {% if heroes %}
+            <h1>{{heroes.0.name}}</h1>
+            <br>
+            <img src="{{heroes.0.picture}}">
+        {% else %}
+            <h1>Choose your hero!</h1>
+        {% endif %}
+    </div>
+    <div class="previous">
+        {% for hero in heroes %}
+            <h3>{{hero.name}}</h1>
+        {% endfor %}
+    </div>
+  </body>
+</html>
