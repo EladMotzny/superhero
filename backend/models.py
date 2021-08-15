@@ -1,7 +1,3 @@
-from datetime import datetime
-
-
-
 class Hero():
     def __init__(self, id, name, picture):
         self.id = id

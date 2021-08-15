@@ -1,8 +1,5 @@
 import requests
 from flask import Flask, render_template, request, redirect
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import desc
-from datetime import datetime
 from backend.models import Hero
 from backend.api import search_hero
 
