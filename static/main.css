@@ -1,16 +1,26 @@
 body {
-    background-image: linear-gradient(120deg, #2b2d42, #8d99ae );
-    color: white;
+    background-image: linear-gradient(120deg, #264653, #2a9d8f );
+    color: #e9c46a;
     font-family: sans-serif;
     
 }
 
 .previous {
+    width: 10%;
     float: left;
+    padding: 10px;
+    white-space: nowrap;
+    
 }
 
-.hero, .search-form, .search {
+.hero {
+    width: 50%;
+    float: right;
+    padding: 20px;
+    
+}
+
+.search-form, .search {
     display: flex;
     justify-content: center;
 }
-

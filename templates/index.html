@@ -10,7 +10,7 @@
   <body>
     <div class="search-form">
       <form action = "/search" method="POST">
-        <label class="search" for="search">Search Hero:</label>
+        <label class="search" for="search"><h1>Search Hero:</h1></label>
         <br/>
         <input type="text" name="search" id="search" placeholder="Deadpool" />
         <input type="submit" value="Search">
@@ -19,15 +19,16 @@
     <div class = "hero">
         {% if heroes %}
             <h1>{{heroes.0.name}}</h1>
-            <br>
             <img src="{{heroes.0.picture}}">
         {% else %}
             <h1>Choose your hero!</h1>
         {% endif %}
     </div>
     <div class="previous">
+        <br>
+        <p>Previously Searched Heroes:</p> 
         {% for hero in heroes %}
-            <h3>{{hero.name}}</h1>
+            <h3>{{hero.name}}</h3>
         {% endfor %}
     </div>
   </body>
